@@ -23,10 +23,10 @@ minetest.register_on_craft(
                 return ItemStack('default:acacia_sapling')
             elseif lottery == 243 then
                 return ItemStack('default:aspen_sapling')
-            elseif lottery == 244 then
-                return ItemStack('default:bush_sapling')
-            elseif lottery == 245 then
-                return ItemStack('default:acacia_bush_sapling')
+            -- elseif lottery == 244 then
+            --     return ItemStack('default:bush_sapling')
+            -- elseif lottery == 245 then
+            --     return ItemStack('default:acacia_bush_sapling')
             elseif lottery > 200 then
                 return ItemStack('default:junglesapling')
             end
