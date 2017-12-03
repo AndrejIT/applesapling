@@ -1,9 +1,9 @@
 
--- Just reciepe to create appletree sapling
--- Maybe it was too expensive...
+-- Just reciepe to create starter sapling
+-- bush sapling, as of minetest 4.15 version
 
 minetest.register_craft({
-	output = "default:sapling",
+	output = "default:bush_sapling",
 	recipe = {
 		{"", "", ""},
 		{"", "default:apple", ""},
@@ -15,7 +15,7 @@ minetest.register_craft({
 minetest.register_on_craft(
     function(itemstack, player, old_craft_grid, craft_inv)
 
-        if itemstack and itemstack:get_name() == "default:sapling" then
+        if itemstack and itemstack:get_name() == "default:bush_sapling" then
             local lottery = math.random(1, 245)
             if lottery == 241 then
                 return ItemStack('default:pine_sapling')
@@ -23,11 +23,11 @@ minetest.register_on_craft(
                 return ItemStack('default:acacia_sapling')
             elseif lottery == 243 then
                 return ItemStack('default:aspen_sapling')
-            -- elseif lottery == 244 then
-            --     return ItemStack('default:bush_sapling')
-            -- elseif lottery == 245 then
-            --     return ItemStack('default:acacia_bush_sapling')
+            elseif lottery == 244 then
+                return ItemStack('default:acacia_bush_sapling')
             elseif lottery > 200 then
+                return ItemStack('default:sapling')
+            elseif lottery > 170 then
                 return ItemStack('default:junglesapling')
             end
         end

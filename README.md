@@ -1,2 +1,2 @@
 # applesapling
-Mod for Minetest game - craft sapling from dirt and apple
+Mod for Minetest game - craft saplings from dirt and apple
